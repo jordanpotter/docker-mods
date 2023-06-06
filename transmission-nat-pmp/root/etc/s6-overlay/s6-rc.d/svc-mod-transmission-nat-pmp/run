@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv bash
+
+GATEWAY=$(grep nameserver /etc/resolv.conf | awk '{print $2}')
+TRANSMISSION_USERNAME=$USER TRANSMISSION_PASSWORD=$PASS /transmission-nat-pmp -gateway $GATEWAY
